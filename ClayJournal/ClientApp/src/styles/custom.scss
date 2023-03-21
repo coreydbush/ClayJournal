@@ -1,0 +1,166 @@
+﻿$orange: #E16237;
+$offWhite: #FEF2E2;
+$offWhiteOverlay: rgb(255,255,255,0.8);
+$offWhiteComplement: #E2EEFE;
+$darkBlue: #2C2E3C;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,400;0,800;1,100;1,400;1,800&family=Roboto:ital,wght@1,300&display=swap');
+
+html, body {
+    height: 100%;
+    background: $offWhite;
+    font-weight: 400;
+    font-family: 'Jost';
+}
+
+.app-wrapper, #root {
+    min-height: 100%;
+}
+
+.main {
+    padding: 0;
+}
+
+a {
+    color: $orange;
+}
+
+.button {
+    background: $orange;
+    color: $offWhite;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.2s;
+    transform: scale(1.00);
+    text-align: center;
+}
+
+.button:hover {
+    transition: 0.2s;
+    background: $darkBlue;
+    transform: scale(1.01);
+}
+
+/** Nav Header **/
+header {
+    background: $darkBlue;
+    .nav-item, .nav-item a {
+        color: $orange !important;
+    }
+    .navbar-brand img {
+        height: 70px;
+    }
+}
+
+/** Hero **/
+.hero {
+    min-height: 400px;
+    height: 50%;
+    color: $offWhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hero-text {
+        h1 {
+            font-family: 'Jost';
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-weight: 400;
+        }
+    }
+}
+
+/** Sidebar **/
+.sidebar {
+    background: $orange;
+}
+
+/** Individual Pot Grid **/
+.userPots {
+    background: rgba(255,255,255,0.5);
+
+    .potBox {
+        width: 25%;
+        padding: 10px;
+
+        .potInner {
+            border: 2px solid $darkBlue;
+            border-radius: 2px;
+            width: 100%;
+            padding: 10px;
+            height: 300px;
+        }
+    }
+}
+
+/** File Upload **/
+.uploadPotFormContainer {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.uploadPotForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .errorMsg {
+        font-size: 9px;
+        color: red;
+        margin-top: -5px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-right: 10px;
+    }
+
+    label {
+        font-size: 12px;
+        margin-bottom: -5px;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    input, textarea, select {
+        display: flex;
+        width: 100%;
+        margin: 10px;
+        border-radius: 5px;
+        border: 0;
+
+        &.error {
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+
+        &[type=submit] {
+            display: block !important;
+        }
+    }
+
+    .glazeAndCoatsContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 10px;
+
+        * {
+            margin: 0;
+        }
+        select {
+            margin-right: 10px;
+            display: flex;
+        }
+        input {
+            width: 60px;
+        }
+    }
+
+}

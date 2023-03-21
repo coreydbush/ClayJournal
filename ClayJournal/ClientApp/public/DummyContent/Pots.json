@@ -1,0 +1,106 @@
+{
+  "username": "Finches",
+  "userId": 123,
+  "pots": [
+    {
+      "id": 1,
+      "name": "Arctic Campfire Bowl",
+      "description": "This is a dinner bowl from the arctic campfire collection. This one has a different number of coats of the glazes that I want to compare to some other pots with the same glaze pattern.",
+      "date": "2023-03-11T23:50:21.817Z",
+      "type": "Bowl",
+      "glazes": [
+        {
+          "brand": "Amaco",
+          "name": "PC-56: Ancient Copper",
+          "coats": 3
+        },
+        {
+          "brand": "Amaco",
+          "name": "Celadon: Snow",
+          "coats": 2
+        },
+        {
+          "brand": "Amaco",
+          "name": "SM: Satin Matte Black",
+          "coats": 2
+        }
+      ],
+      "clay": "VP Porcelain"
+    },
+    {
+      "id": 2,
+      "name": "Arctic Campfire Plate",
+      "description": "This is a small plate from arctic campfire. I want to compare this plate to some others with the same glaze pattern.",
+      "date": "2023-03-14T23:50:21.817Z",
+      "type": "Plate",
+      "glazes": [
+        {
+          "brand": "Amaco",
+          "name": "PC-56: Ancient Copper",
+          "coats": 2
+        },
+        {
+          "brand": "Amaco",
+          "name": "Celadon: Snow",
+          "coats": 2
+        },
+        {
+          "brand": "Amaco",
+          "name": "SM: Satin Matte Black",
+          "coats": 2
+        }
+      ],
+      "clay": "Brown Stoneware"
+    },
+    {
+      "id": 3,
+      "name": "Seaside Plate",
+      "description": "Side plate for salads and such. This one uses a non food safe glaze just on the outer rim where food shouldnt touch.",
+      "date": "2023-03-18T23:50:21.817Z",
+      "type": "Plate",
+      "glazes": [
+        {
+          "brand": "Mayco",
+          "name": "Satin Patina",
+          "coats": 2
+        },
+        {
+          "brand": "Amaco",
+          "name": "Celadon: Snow",
+          "coats": 2
+        },
+        {
+          "brand": "Amaco",
+          "name": "PC56: Ancient Copper",
+          "coats": 2
+        }
+      ],
+      "clay": "VP Porcelain"
+    },
+    {
+      "id": 4,
+      "name": "Seaside Mug",
+      "description": "10oz mug thrown with porcelain. This one has a seaside vibe to it.",
+      "date": "2022-05-12T23:50:21.817Z",
+      "type": "Mug",
+      "glazes": [
+        {
+          "brand": "Mayco",
+          "name": "Satin Patina",
+          "coats": 2
+        },
+        {
+          "brand": "Amaco",
+          "name": "Celadon: Snow",
+          "coats": 2
+        },
+        {
+          "brand": "Amaco",
+          "name": "PC56: Ancient Copper",
+          "coats": 2
+        }
+      ],
+      "clay": "Porcelain"
+    }
+  ]
+}
