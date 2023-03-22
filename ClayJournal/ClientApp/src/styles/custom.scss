@@ -1,4 +1,5 @@
 ﻿$orange: #E16237;
+$lightOrange: #ea9173;
 $offWhite: #FEF2E2;
 $darkOffWhite: #e4d9cb;
 $lightOffWhite: #fef7ed;
@@ -27,6 +28,7 @@ html, body {
     display: flex;
     height: 100%;
     align-items: center;
+    transition: 0.5s;
 }
 
 .spinner {
@@ -167,6 +169,7 @@ html, body {
                 &:after {
                     content: "";
                     position: absolute;
+                    border-radius: 10px;
                     top: 0;
                     left: 0;
                     right: 0;
@@ -307,6 +310,11 @@ html, body {
             :hover {
                 background: $lightOffWhite;
             }
+            &.active {
+                a {
+                    color: $orange;
+                }
+            }
         }
 
         .divider {
@@ -327,7 +335,10 @@ html, body {
     /** Individual Pot Grid **/
     .userPots {
         .potBox {
-
+            a {
+                color: $darkBlue;
+                text-decoration: none;
+            }
             .potInner {
                 background:  $lightOffWhite;
                 border: 0;
@@ -407,6 +418,11 @@ html, body {
             :hover {
                 background: $midBlue;
             }
+            &.active {
+                a {
+                    color: $lightOrange;
+                }
+            }
         }
 
         .divider {
@@ -428,7 +444,10 @@ html, body {
     /** Individual Pot Grid **/
     .userPots {
         .potBox {
-
+            a {
+                color: $offWhite;
+                text-decoration: none;
+            }
             .potInner {
                 background:  #42445A;
                 border: 0;

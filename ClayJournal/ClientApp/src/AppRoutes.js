@@ -1,5 +1,7 @@
 import Upload from "./components/Upload";
-import Profile from "./components/Profile";
+import MyPots from "./components/MyPots";
+import IndividualPot from "./components/IndividualPot";
+import Browse from "./components/Browse";
 import { Logout } from "./components/Logout";
 import { Home } from "./components/Home";
 
@@ -13,13 +15,21 @@ const AppRoutes = [
     element: <Upload />
   },
   {
-    path: '/profile',
-    element: <Profile />
-    },
-    {
-        path: '/logout',
-        element: <Logout />
-    }
+    path: '/browse',
+    element: <Browse />
+  },
+  {
+    path: '/pot/*',
+    element: <IndividualPot />
+  },
+  {
+    path: '/mypots',
+    element: <MyPots />
+  },
+  {
+    path: '/logout',
+    element: <Logout />
+  }
 ];
 
 export default AppRoutes;

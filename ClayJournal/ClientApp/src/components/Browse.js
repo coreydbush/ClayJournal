@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from 'react';
 import PotBox from './partials/PotBox';
 import Spinner from './partials/Spinner';
 
-function Profile(props) {
+function Browse(props) {
 
   const [state, setState] = useState([])
   const [spinner, setSpinner] = useState(true);
@@ -14,7 +14,7 @@ function Profile(props) {
   return (
     <div className="profileWrapper container">
       {spinner ? <Spinner /> : ''}
-      <div className="pageTitle"><h1>My Pots</h1></div>
+      <div className="pageTitle"><h1>Browse Submissions</h1></div>
       <div className="row">
         <section className="userPots row col-md-12">
           {state.map( d => 
@@ -27,4 +27,4 @@ function Profile(props) {
 
 };
 
-export default Profile;
+export default Browse;
