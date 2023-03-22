@@ -1,18 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Container } from 'reactstrap';
 import NavMenu from './NavMenu';
 
-export class Layout extends Component {
-  static displayName = Layout.name;
+function Layout(props) {
+  const [theme, setTheme] = useState("dark")
+  const [displayName] = Layout.name;
 
-  render() {
-    return (
-      <div className="app-wrapper">
-        <NavMenu />
-        <div tag="main" className="main container-fluid">
-          {this.props.children}
-        </div>
+  console.log('s', theme);
+  
+  let handleThemeChange = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <div className={`app-wrapper ${theme}`}>
+      <NavMenu handleThemeChange={handleThemeChange} theme={theme}/>
+      <div tag="main" className="main container-fluid">
+        {props.children}
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default Layout;

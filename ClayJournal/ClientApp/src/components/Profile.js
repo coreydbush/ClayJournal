@@ -1,21 +1,22 @@
 import React, { Component, useState, useEffect } from 'react';
 import PotBox from './partials/PotBox';
+import Spinner from './partials/Spinner';
 
 function Profile(props) {
 
   const [state, setState] = useState([])
-  
+  const [spinner, setSpinner] = useState(true);
+
   useEffect(() => {
-    fetch("/pots").then(response => response.json()).then(data => setState(data))
+    fetch("/pots").then(response => response.json()).then(function(data) { setState(data); setSpinner(false);}).finally(setSpinner(false));
   })
 
   return (
     <div className="profileWrapper container">
+      {spinner ? <Spinner /> : ''}
+      <div className="pageTitle"><h1>My Pots</h1></div>
       <div className="row">
-        <section className="sidebar col-md-3">
-          <div>Sidebar Item</div>
-        </section>
-        <section className="userPots row col-md-9">
+        <section className="userPots row col-md-12">
           {state.map( d => 
             <PotBox key={d.potId} pot={d}/>
           )}
