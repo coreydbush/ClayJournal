@@ -2,8 +2,6 @@ import React, { Component, useState, useEffect, setValue } from 'react';
 import { useForm } from "react-hook-form";
 
 function GlazeAndCoatsSelector(props) {
-
-  console.log(props);
   
   return (
     <div className="glazeAndCoatsContainer">

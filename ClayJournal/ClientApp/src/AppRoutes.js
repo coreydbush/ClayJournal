@@ -26,10 +26,6 @@ const AppRoutes = [
     path: '/mypots',
     element: <MyPots />
   },
-  {
-    path: '/logout',
-    element: <Logout />
-  }
 ];
 
 export default AppRoutes;
