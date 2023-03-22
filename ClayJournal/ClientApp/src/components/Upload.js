@@ -20,24 +20,28 @@ function Upload() {
   }
 
   return (
-    <section className="uploadPotFormContainer">
-      <form className="uploadPotForm" onSubmit={handleSubmit(onSubmit)}>
+    <div>
+      <div className="pageTitle"><h1>Upload a Pot</h1></div>
+      <section className="uploadPotFormContainer">
         
-        <label>Name</label>
-        <input className={ errors?.name ? "error" : "no-error" } {...register("name", { required: true, minLength: 1, maxLength: 50 })} />
-        {errors.name && <span className="errorMsg">This field is required</span>}
-        
-        <label>Description</label>
-        <textarea className={ errors?.description ? "error" : "no-error" } {...register("description", { required: true, minLength: 1, maxLength: 200 })} />
-        {errors.description && <span className="errorMsg">This field is required</span>}
-        
-        <button className="button" onClick={handleAddGlazeAndCoatsSelector}>+ Add Glaze & Coats</button>
-        
-        {glazeAndCoatsSelector}
+        <form className="uploadPotForm" onSubmit={handleSubmit(onSubmit)}>
+          
+          <label>Name</label>
+          <input className={ errors?.name ? "error" : "no-error" } {...register("name", { required: true, minLength: 1, maxLength: 50 })} />
+          {errors.name && <span className="errorMsg">This field is required (must be under 50 characters)</span>}
+          
+          <label>Description</label>
+          <textarea className={ errors?.description ? "error" : "no-error" } {...register("description", { required: true, minLength: 1, maxLength: 200 })} />
+          {errors.description && <span className="errorMsg">This field is required (must be under 200 characters)</span>}
+          
+          <button className="button" onClick={handleAddGlazeAndCoatsSelector}>+ Add Glaze & Coats</button>
+          
+          {glazeAndCoatsSelector}
 
-        <input className="button" type="submit" value="Save to my pots"/>
-      </form>
-    </section>
+          <input className="button" type="submit" value="Save to my pots"/>
+        </form>
+      </section>
+    </div>
   );
   
 }

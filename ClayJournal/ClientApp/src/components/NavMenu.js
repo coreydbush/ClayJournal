@@ -3,38 +3,42 @@ import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from '
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
 import ClayJournalLogo from '../Images/clayjournal-logo-long.svg';
+import ClayJournalLogoDark from '../Images/clayjournal-logo-long-dark.svg';
+
+import sunIcon from '../Images/sun-icon.png';
+import moonIcon from '../Images/moon-icon.png';
 
 
 function NavMenu(props) {
 
   const [collapsed, setCollapsed] = useState('true');
 
-  const toggleNavbar = e => {
-    setCollapsed(!collapsed);
-  };
-
   return (
     <header>
-      <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
-              <NavbarBrand tag={Link} to="/"><img src={ClayJournalLogo} alt="ClayJournal Logo"></img></NavbarBrand>
-        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-        <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!collapsed} navbar>
-          <ul className="navbar-nav flex-grow">
-            <NavItem>
-              <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} className="text-dark" to="/profile">Profile</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} className="text-dark" to="/upload">Upload</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} className="text-dark" to="/logout">Login</NavLink>
-            </NavItem>
+      <div className="topNav">
+        <div className="navbarBrandImg" tag={Link} to="/"><img src={ props.theme === 'light' ? ClayJournalLogoDark : ClayJournalLogo } alt="ClayJournal Logo"></img></div>
+        <div className="divider"></div>
+        <div navbar>
+          <ul className="sideNav navbar-nav flex-grow">
+            <li>
+              <NavLink tag={Link} className="navLink" to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink tag={Link} className="navLink" to="/profile">Profile</NavLink>
+            </li>
+            <li>
+              <NavLink tag={Link} className="navLink" to="/upload">Upload</NavLink>
+            </li>
+            <li>
+              <NavLink tag={Link} className="navLink" to="/logout">Login</NavLink>
+            </li>
           </ul>
-        </Collapse>
-      </Navbar>
+        </div>
+        <div className="divider"></div>
+      </div>
+      <div className="bottomNav">
+        <button className="themeSwitcher" onClick={props.handleThemeChange}><img src={ props.theme === 'light' ? moonIcon : sunIcon }/></button>
+      </div>
     </header>
   );
 };

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
-import { Layout } from './components/Layout';
+import Layout from './components/Layout';
 import './styles/custom.scss';
 
 export default class App extends Component {
