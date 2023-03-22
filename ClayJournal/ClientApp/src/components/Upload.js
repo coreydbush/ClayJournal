@@ -7,7 +7,7 @@ function Upload() {
   const onSubmit = data => console.log(data);
   const [glazeAndCoatsSelector, setGlazeAndCoatsSelector] = useState([<GlazeAndCoatsSelector key={0} />]);
   
-  console.log('w',watch(...glazeAndCoatsSelector));
+  console.log('w', watch(...glazeAndCoatsSelector));
 
   useEffect(() => {
     register("glaze" + glazeAndCoatsSelector.length);

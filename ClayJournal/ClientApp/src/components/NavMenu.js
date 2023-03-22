@@ -35,7 +35,7 @@ function NavMenu(props) {
               <NavLink tag={Link} className="navLink" to="/upload">Upload</NavLink>
             </li>
             <li className={splitLocation[1] === "logout" ? "active" : ""}>
-              <NavLink tag={Link} className="navLink" to="/logout">Logout</NavLink>
+              <NavLink className="navLink modalLink" onClick={props.toggleLogOut}>Logout</NavLink>
             </li>
           </ul>
         </div>
