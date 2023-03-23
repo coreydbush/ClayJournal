@@ -6,10 +6,10 @@ function PotBox(props) {
 
   return (
     <div className="potBox col-lg-3 col-md-6 col-sm-6" key={props.pot.potId}>
-      <Link to={"/pot/" + props.pot.potName} >
+      <Link to={"/pot/" + props.pot.potId}>
         <div className="potInner">
           <div className="potImage" style={{
-            backgroundImage: 'url(' + PlaceholderPotImage + ')',
+            backgroundImage: 'url(data:image/png;base64,' + props.pot.potImage + ')',
             backgroundSize: "cover",
             backgroundPosition: "center"
         }}></div>
