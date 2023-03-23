@@ -11,6 +11,7 @@ $lightBlue: #42445A;
 $teal: #37B6E1;
 $boxShadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 $red: #f64747;
+$lightRed: #f66969;
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,400;0,800;1,100;1,400;1,800&family=Roboto:ital,wght@1,300&display=swap');
 
@@ -145,6 +146,13 @@ html, body {
         transition: 0.2s;
         transform: scale(1.00);
         text-align: center;
+        &.error {
+            background: $red !important;
+            &:hover {
+                background: $lightRed !important;
+                transform: scale(1.00);
+            }
+        }
     }
 
     .button:hover {
@@ -291,6 +299,52 @@ html, body {
                     height: 100px;
                     overflow: hidden;
                 }
+            }
+        }
+    }
+
+    /** Individual Pot Page **/
+    .individualPot {
+        .titleRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button {
+                width: auto;
+                height: auto;
+            }
+        }
+        .zoomImage {
+            border-radius: 10px;
+        }
+        img {
+            border-radius: 10px;
+            width: 100%;
+            opacity: 100%;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0;
+                transition: 0.2s;
+            }
+        }
+        .potSection {
+            margin-bottom: 20px;
+            &.notes {
+                margin-top: 20px;
+            }
+        }
+        .glaze {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            .numberOfCoats {
+                font-weight: 800;
+                margin-right: 10px;
+                border: 2px solid $teal;
+                padding: 2px 3px;
+                border-radius: 5px;
+                color: $teal;
             }
         }
     }
