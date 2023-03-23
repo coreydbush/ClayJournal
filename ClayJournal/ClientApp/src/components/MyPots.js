@@ -10,7 +10,7 @@ function MyPots(props) {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch("/pots").then(response => response.json()).then(function(data) { setState(data); setSpinner(false);}).finally(setSpinner(false));
+    fetch("/pots/user/1").then(response => response.json()).then(function(data) { setState(data); setSpinner(false);});
   });
 
   return (

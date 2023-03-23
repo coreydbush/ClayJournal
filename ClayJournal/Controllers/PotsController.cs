@@ -25,8 +25,8 @@ namespace ClayJournal.Controllers
             return results;
         }
 
-        [HttpGet]
-        [HttpGet("/{id}")]
+        
+        [HttpGet("{potId}")]
         public ActionResult<Pot> GetPotsById(int potId)
         {
             var results = _potsManager.GetById(potId);
@@ -55,7 +55,7 @@ namespace ClayJournal.Controllers
             return NoContent();
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("{potId}")]
         public IActionResult Delete(int potId)
         {
             _potsManager.Delete(potId);

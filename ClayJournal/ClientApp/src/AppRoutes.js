@@ -19,7 +19,7 @@ const AppRoutes = [
     element: <Browse />
   },
   {
-    path: '/pot/*',
+    path: '/viewpots/*',
     element: <IndividualPot />
   },
   {
