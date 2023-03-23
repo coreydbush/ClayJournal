@@ -1,4 +1,5 @@
-﻿using ClayJournal.Managers;
+﻿using ClayJournal.Dtos;
+using ClayJournal.Managers;
 using ClayJournal.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,11 @@ namespace ClayJournal.Controllers
             return results;
         }
 
-
+        [HttpPost]
+        public IActionResult Post([FromForm] PotDto pot)
+        {
+            _potsManager.Create(pot);
+            return NoContent();
+        }
     }
 }
