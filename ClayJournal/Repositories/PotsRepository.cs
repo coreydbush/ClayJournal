@@ -9,6 +9,13 @@ namespace ClayJournal.Repositories
         {
             _context = context;
         }
+
+        public void Create(Pot pot)
+        {
+            _context.Add(pot);
+            _context.SaveChanges();
+        }
+
         public List<Pot> Get()
         {
             var pots = _context.Pots.ToList();
