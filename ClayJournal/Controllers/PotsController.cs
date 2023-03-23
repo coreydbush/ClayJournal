@@ -1,4 +1,5 @@
-﻿using ClayJournal.Managers;
+﻿using ClayJournal.Dtos;
+using ClayJournal.Managers;
 using ClayJournal.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,13 @@ namespace ClayJournal.Controllers
 
         [HttpGet]
         public IEnumerable<Pot> Get()
+        {
+            var results = _potsManager.Get();
+            return results;
+        }
+
+        [HttpPost]
+        public IEnumerable<Pot> Upload(PotDto pot)
         {
             var results = _potsManager.Get();
             return results;
