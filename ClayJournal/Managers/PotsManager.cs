@@ -35,10 +35,27 @@ namespace ClayJournal.Managers
             return results;
         }
 
-        public List<Pot> Get()
+        public List<Pot> GetAll()
         {
-            var results = _potsRepository.Get();
+            var results = _potsRepository.GetAll();
             return results;
+        }
+
+        public List<Pot> GetByUserId(int userId)
+        {
+            var results = _potsRepository.GetByUserId(userId);
+            return results;
+        }
+
+        public Pot GetById(int potId)
+        {
+            var results = _potsRepository.GetById(potId);
+            return results;
+        }
+
+        public void Delete(int potId)
+        {
+            _potsRepository.Delete(potId);
         }
     }
 }

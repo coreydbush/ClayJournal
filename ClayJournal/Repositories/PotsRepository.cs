@@ -16,9 +16,32 @@ namespace ClayJournal.Repositories
             _context.SaveChanges();
         }
 
-        public List<Pot> Get()
+        public void Delete(int potId)
+        {
+            var pot = _context.Pots.Find(potId);
+            if (pot is null)
+            {
+                return;
+            }
+            _context.Remove(pot);
+            _context.SaveChanges();
+        }
+
+        public List<Pot> GetAll()
         {
             var pots = _context.Pots.ToList();
+            return pots;
+        }
+
+        public Pot GetById(int potId)
+        {
+            Pot pot = _context.Pots.Find(potId);
+            return pot;
+        }
+
+        public List<Pot> GetByUserId(int userId)
+        {
+            List<Pot> pots = _context.Pots.Where(x => x.UserId == userId).ToList();
             return pots;
         }
     }
