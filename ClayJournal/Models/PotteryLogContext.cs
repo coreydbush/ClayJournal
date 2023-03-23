@@ -61,11 +61,14 @@ public partial class PotteryLogContext : DbContext
 
         modelBuilder.Entity<Pot>(entity =>
         {
-            entity.HasNoKey();
+            entity.HasKey(e => e.PotId).HasName("PK__Pots__6082CEFBA9EFD0E5");
 
             entity.Property(e => e.PotDescription).HasMaxLength(1000);
-            entity.Property(e => e.PotId).ValueGeneratedOnAdd();
             entity.Property(e => e.PotName).HasMaxLength(500);
+            entity.Property(e => e.PotNotes)
+                .HasMaxLength(500)
+                .HasDefaultValueSql("('')");
+            entity.Property(e => e.UserId).HasDefaultValueSql("((1))");
         });
 
         modelBuilder.Entity<PotGlaze>(entity =>

@@ -15,6 +15,7 @@ function Upload() {
         formData.append("description", data.description);
         formData.append("notes", data.notes);
         formData.append("image", data.potImage[0]);
+        console.log(data);
         fetch('/pots', {
             method: 'POST',
             body: formData

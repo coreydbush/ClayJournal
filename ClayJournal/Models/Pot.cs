@@ -12,4 +12,8 @@ public partial class Pot
     public string? PotDescription { get; set; }
 
     public byte[]? PotImage { get; set; }
+
+    public int UserId { get; set; }
+
+    public string PotNotes { get; set; } = null!;
 }

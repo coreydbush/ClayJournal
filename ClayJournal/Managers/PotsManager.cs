@@ -21,6 +21,7 @@ namespace ClayJournal.Managers
                 PotDescription = potDto.Description,
                 PotImage = imageBytes,
                 PotName = potDto.Name,
+                PotNotes = potDto.Notes
             };
 
             _potsRepository.Create(pot);
