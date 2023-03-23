@@ -3,6 +3,7 @@
     "sass": "^1.59.3"
   },
   "dependencies": {
-    "react-hook-form": "^7.43.7"
+    "react-hook-form": "^7.43.7",
+    "react-img-hover-zoom": "^0.1.8"
   }
 }

@@ -19,7 +19,7 @@ function Modal(props) {
                         Are you sure you want to logout?
                     </div>
                     <div className="modalButtons">
-                        <button className="button">Confirm</button><button className="button" data-dismiss="modal" aria-label="Close" onClick={props.toggleLogOut}><span aria-hidden="true">Cancel</span></button>
+                        <button className="button">Confirm</button><button className="button error" data-dismiss="modal" aria-label="Close" onClick={props.toggleLogOut}><span aria-hidden="true">Cancel</span></button>
                     </div>
                 </div>
             </div>
