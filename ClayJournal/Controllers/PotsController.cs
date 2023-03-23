@@ -19,9 +19,32 @@ namespace ClayJournal.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Pot> Get()
+        public IEnumerable<Pot> GetAll()
         {
-            var results = _potsManager.Get();
+            var results = _potsManager.GetAll();
+            return results;
+        }
+
+        [HttpGet]
+        [HttpGet("/{id}")]
+        public ActionResult<Pot> GetPotsById(int potId)
+        {
+            var results = _potsManager.GetById(potId);
+            if (results is null)
+            {
+                return NotFound();
+            }
+            return results;
+        }
+
+        [HttpGet("user/{userId}")]
+        public ActionResult<IEnumerable<Pot>> GetPotsByUser(int userId)
+        {
+            var results = _potsManager.GetByUserId(userId);
+            if (results is null || results.Count == 0)
+            {
+                return NotFound();
+            }
             return results;
         }
 
@@ -29,6 +52,13 @@ namespace ClayJournal.Controllers
         public IActionResult Post([FromForm] PotDto pot)
         {
             _potsManager.Create(pot);
+            return NoContent();
+        }
+
+        [HttpDelete("/{id}")]
+        public IActionResult Delete(int potId)
+        {
+            _potsManager.Delete(potId);
             return NoContent();
         }
     }
