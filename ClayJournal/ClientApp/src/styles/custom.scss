@@ -32,7 +32,6 @@ html, body {
     transition: 0.5s;
 }
 
-
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -77,14 +76,15 @@ html, body {
                 margin-bottom: 25px;
             }
         }
-        .modal-close-button {
-            font-size: 1.4rem;
-            font-weight: 700;
-            line-height: 1;
-            color: #000;
-            opacity: .3;
-            cursor: pointer;
-            border: none;
+        .button.close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .modalButtons {
             display: flex;
@@ -353,6 +353,7 @@ html, body {
     .uploadPotFormContainer {
         width: 500px;
         margin: 0 auto;
+        margin-bottom: 45px;
         padding: 10px;
         border-radius: 10px;
     }
@@ -557,6 +558,9 @@ html, body {
     }
 
     /** Individual Pot Grid **/
+    .potsWrapper {
+        overflow: hidden;
+    }
     .userPots {
         .potBox {
             a {
@@ -590,7 +594,6 @@ html, body {
 
     /** File Upload **/
     .uploadPotFormContainer {
-        background: $lightOffWhite;
         box-shadow: $boxShadow;
     }
 
@@ -731,7 +734,6 @@ html, body {
 
     /** File Upload **/
     .uploadPotFormContainer {
-        background: $lightBlue;
         box-shadow: $boxShadow;
     }
 

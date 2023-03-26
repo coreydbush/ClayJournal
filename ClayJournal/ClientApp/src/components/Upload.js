@@ -56,7 +56,7 @@ function Upload() {
 
                     {/* <button className="button" onClick={handleAddGlazeAndCoatsSelector}>+ Add Glaze & Coats</button>
           
-          {glazeAndCoatsSelector} */}
+                    {glazeAndCoatsSelector} */}
 
                     <input type="file" {...register("potImage")} />
 

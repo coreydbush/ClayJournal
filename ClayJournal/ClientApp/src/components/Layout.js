@@ -3,6 +3,8 @@ import { Container } from 'reactstrap';
 import NavMenu from './NavMenu';
 import useModal from './partials/hooks/useModal';
 import Modal from './partials/Modal';
+import ModalUpload from './partials/ModalUpload';
+
 
 function Layout(props) {
 
@@ -10,10 +12,16 @@ function Layout(props) {
   const [displayName] = Layout.name;
 
   const [isShowingLogOut, setIsShowingLogOut] = useState(false);
+  const [isShowingUpload, setIsShowingUpload] = useState(false);
 
   //const {isShowing, toggleLogOut} = useModal();
   const toggleLogOut = () => {
     setIsShowingLogOut(!isShowingLogOut);
+  };
+
+  const toggleUpload = () => {
+    console.log('t');
+    setIsShowingUpload(!isShowingUpload);
   };
 
   let handleThemeChange = () => {
@@ -22,12 +30,13 @@ function Layout(props) {
 
   return (
     <div className={`app-wrapper ${theme}`}>
-      <NavMenu handleThemeChange={handleThemeChange} theme={theme} toggleLogOut={toggleLogOut}/>
+      <NavMenu handleThemeChange={handleThemeChange} theme={theme} toggleLogOut={toggleLogOut} toggleUpload={toggleUpload}/>
       <div tag="main" className="main container-fluid">
         {props.children}
       </div>
 
       <Modal isShowingLogOut={isShowingLogOut} toggleLogOut={toggleLogOut} />
+      <ModalUpload isShowingUpload={isShowingUpload} toggleUpload={toggleUpload} />
     </div>
   );
 }

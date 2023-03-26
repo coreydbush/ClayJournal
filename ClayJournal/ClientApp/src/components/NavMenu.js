@@ -1,12 +1,11 @@
 import React, { Component, useState, } from 'react';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import './NavMenu.css';
 import ClayJournalLogo from '../Images/clayjournal-logo-long.svg';
 import ClayJournalLogoDark from '../Images/clayjournal-logo-long-dark.svg';
-
 import sunIcon from '../Images/sun-icon.png';
 import moonIcon from '../Images/moon-icon.png';
+import './NavMenu.css';
 import { useLocation } from "react-router-dom";
 
 function NavMenu(props) {
@@ -32,7 +31,7 @@ function NavMenu(props) {
               <NavLink tag={Link} className="navLink" to="/mypots">My Pots</NavLink>
             </li>
             <li className={splitLocation[1] === "upload" ? "active" : ""}>
-              <NavLink tag={Link} className="navLink" to="/upload">Upload</NavLink>
+              <NavLink className="navLink modalLink" onClick={props.toggleUpload}>Upload</NavLink>
             </li>
             <li className={splitLocation[1] === "logout" ? "active" : ""}>
               <NavLink className="navLink modalLink" onClick={props.toggleLogOut}>Logout</NavLink>

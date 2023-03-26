@@ -27,7 +27,7 @@ function MyPots(props) {
           />
         </div>
       </div>
-      <div className="row">
+      <div className="row potsWrapper">
         <Scrollbar>
           <div className="userPots row col-md-12">
             {state.filter(( f => { 

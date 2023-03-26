@@ -11,10 +11,6 @@ const AppRoutes = [
     element: <Home />
   },
   {
-    path: '/upload',
-    element: <Upload />
-  },
-  {
     path: '/browse',
     element: <Browse />
   },
